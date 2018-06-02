@@ -188,14 +188,16 @@
   };
   var wizardSpeed = 3;
   var wizardWidth = 70;
+  var wizardHeight;
   var getWizardHeight = function(wizardWidth) {
-    return wizardWidth * 1.337;
+    wizardHeight = wizardWidth * 1.337;
+    return wizardHeight;
   };
   var getWizardX = function(width) {
-    return width / 2 - wizardWidth / 2;
+    return (width - wizardWidth) / 2;
   };
   var getWizardY = function(height) {
-    return height * 1 / 3;
+    return height / 3 - wizardHeight;
   };
 </script>
 
