@@ -16,6 +16,11 @@ var WIZARD_FIREBALL = ['#ee4830', '#30a8ee', '#5ce6c0', '#e848d5', '#e6e848'];
 
 var MAX_WIZARD_NUMBER = 4;
 
+var setupPosition = {
+  left: '50%',
+  top: '80px'
+};
+
 var ESC_KEYCODE = 27;
 var ENTER_KEYCODE = 13;
 
@@ -82,6 +87,9 @@ var openPopup = function () {
 var closePopup = function () {
   setup.classList.add('hidden');
   document.removeEventListener('keydown', onPopupEscPress);
+
+  setup.style.left = setupPosition.left;
+  setup.style.top = setupPosition.top;
 };
 
 setupOpen.addEventListener('click', function () {
